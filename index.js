@@ -165,6 +165,48 @@ const zasadyChodzeniaLudzika=[
     ]
   },
 ];
+const zasadyChodzeniaPoWodzie = [
+  {
+    klawisz:'ArrowRight',
+    przed:[
+      'L1',
+    ],
+    po:[
+      '1L',
+    ]
+  },
+  {
+    klawisz:'ArrowLeft',
+    przed:[
+      '1L',
+    ],
+    po:[
+      'L1',
+    ]
+  },
+  {
+    klawisz:'ArrowUp',
+    przed:[
+      '1',
+      'L',
+    ],
+    po:[
+      'L',
+      '1'
+    ]
+  },
+  {
+    klawisz:'ArrowDown',
+    przed:[
+      'L',
+      '1',
+    ],
+    po:[
+      '1',
+      'L'
+    ]
+  },
+];
 const zasadyLudzika=[
   ...zamienZasady(zasadyChodzeniaLudzika,'?','p'),
   ...zamienZasady(zasadyChodzeniaLudzika,'?','z'),
@@ -227,6 +269,8 @@ const zasadyLudzika=[
       'wp',
     ]
   },
+
+  ...zasadyChodzeniaPoWodzie,
 ];
 const wsad =  {
   ArrowUp:'w',
