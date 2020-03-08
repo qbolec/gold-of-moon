@@ -1,0 +1,140 @@
+td {
+  background: green;
+  width:40px;
+  height:40px;
+  position:relative;
+  font-family:Arial;
+  color:white;
+}
+td:before, td:after{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  line-height:40px;
+  text-align:center;
+  display:inline-block;
+}
+td:nth-of-type(3n):after{
+  animation-delay:-2.3s;
+}
+td:nth-of-type(3n+2):after{
+  animation-delay:-0.6s;
+}
+table {
+  border-collapse: collapse;
+}
+._0:before{content:"0"}
+._0{
+  background:hsl(240, 100%, 80%);
+}
+._1:before{content:"1"}
+._1{
+  background:hsl(240, 100%, 70%);
+}
+._2:before{content:"2"}
+._2{
+    background:hsl(240, 100%, 60%);
+}
+._3:before{content:"3"}
+._3{
+    background:hsl(240, 100%, 50%);
+}
+._4:before{content:"4"}
+._4{
+    background:hsl(240, 100%, 40%);
+}
+._5:before{content:"5"}
+._5{
+  background:hsl(240, 100%, 30%);
+}
+.z{
+  background-image: repeating-linear-gradient(-45deg, 
+      green 0 5px, 
+      darkgreen 5px 10px)
+}
+@keyframes poswiata {
+  0%   { opacity:0 }
+  100% { opacity:.8 }
+}
+@keyframes wir {
+  0% {  transform:rotate(0deg);
+}
+  100% {  transform:rotate(360deg);
+}
+}
+.d:after{
+  background:radial-gradient(teal, gold 50%,black 70%);
+  animation: poswiata 2s infinite alternate;
+}
+.d{
+  background:radial-gradient(teal, gold 30%,black 60%);
+}
+.d:before, .d:after{
+  content:"💎";
+}
+.k:after{
+  background:radial-gradient(red, black 80%);
+  animation: poswiata 2s infinite alternate;
+}
+.k:before,.k:after{
+  content:"🎱";
+}
+.k{
+  background: radial-gradient(red,  black 50%);
+}
+.K:after{
+  background:radial-gradient(red, rgba(0,0,0,0) 80%);
+  animation: poswiata 2s infinite alternate;
+}
+.K:before,.K:after{
+  content:"🎱";
+  animation: wir .5s linear infinite;
+}
+.K{
+  background: radial-gradient(red,  black 50%);
+}
+.l:before{
+  content:"⛹";
+}
+.P:before{
+  content:"🧑‍🤝‍🧑"
+}
+.l,.L,.P {
+  font-size:30px;
+}
+.l, .L, .p, .P {
+  background: black;
+}
+.L:before {
+  content: "🧍"
+}
+.o,.O,.q,.Q{
+  background:red;
+}
+.o:before,.O:before,.q:before,.Q:before{
+  content:" ";
+  border:12px solid purple;
+  box-sizing: border-box;
+  animation: poswiata 1s infinite alternate;
+}
+.o:after,.O:after,.q:after,.Q:after{
+  content:" ";
+  border:6px solid blue;
+  box-sizing:border-box;
+  animation: poswiata 1s infinite alternate;
+}
+.w:before{
+  content:"🚪"
+}
+table,button{
+  display:inline-block;
+}
+body{
+  overflow:hidden;
+}
+pre{
+  height:300px;
+  overflow-y:scroll;
+}
