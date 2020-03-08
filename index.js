@@ -43,6 +43,8 @@ function pokaż(plansza){
   });
 }
 
+const concat= s=>[].concat.apply([],s);
+
 pokaż(plansza);
 
 document.body.addEventListener('keydown',(e)=>{
@@ -366,26 +368,28 @@ const smieszneZasady = [
     przed:["Ll"],
     po:["pP"],
   },
-  {
-    klawisz:'ArrowLeft',
-    przed:['pP'],
-    po:['Ll'],
-  },
-  {
-    klawisz:'ArrowRight',
-    przed:['Pp'],
-    po:['lL'],
-  },
-  {
-    klawisz:'a',
-    przed:['pP'],
-    po:['lL'],
-  },
-  {
-    klawisz:'d',
-    przed:['Pp'],
-    po:['Ll'],
-  },
+  ...concat(['z','p'].map(x => [
+    {
+      klawisz:'ArrowLeft',
+      przed:[x+'P'],
+      po:['Ll'],
+    },
+    {
+      klawisz:'ArrowRight',
+      przed:['P'+x],
+      po:['lL'],
+    },
+    {
+      klawisz:'a',
+      przed:[x+'P'],
+      po:['lL'],
+    },
+    {
+      klawisz:'d',
+      przed:['P'+x],
+      po:['Ll'],
+    },
+  ])),
 ];
 const zasadyChodzeniaPotwora=[
   {
@@ -440,7 +444,6 @@ const zasadyPotwora = [
 ];
 const wody=[1,2,3,4,5];
 const max_wody=wody[wody.length-1];
-const concat= s=>[].concat.apply([],s);
 const zasadySpadaniaWody=[
   ...concat(wody.map(g=>[
     {
