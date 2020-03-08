@@ -5,6 +5,7 @@ var klawisze;
 function restart(){
   klawisze={}
   plansza=[
+    'zzzzzzzzzzzzzzzzzzzzzzzzzzzzz555555',
     'Kzlppdpppkppppppkdpdkzzoz5555555555',
     'zzzzppzzzpkzzzzzkzpodzozzzzzz555555',
     'zzzkpzzkzzzkkzzpppppdzzozzzzzpzzzzz',
