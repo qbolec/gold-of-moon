@@ -500,6 +500,13 @@ const zasadyRozlewaniaWody=[
   //   ]
   // })),
 ];
+
+const zasadySturlaniaWody = concat(wody.map(w => 
+  concat(['d','k','z'].map(z => 
+    zamienZasady(zamienZasady(zasadySturlania,'?',w),'%',z))
+  )
+));
+
 const zasadyUsrednianiaWody= [
   ...concat(wody.filter(g=>g%2).map(g=>[
     {
@@ -575,6 +582,7 @@ const zasadyTryskaniaWody=[
 ];
 const zasadyWody=[
   ...zasadySpadaniaWody,
+  ...zasadySturlaniaWody,
   ...zasadyRozlewaniaWody,
   ...zasadyUsrednianiaWody,      
   ...zasadyFalowaniaWody,
