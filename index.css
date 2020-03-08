@@ -25,27 +25,27 @@ td:nth-of-type(3n+2):after{
 table {
   border-collapse: collapse;
 }
-._0:before{content:"0"}
-._0{
-  background:hsl(240, 100%, 80%);
+._1,._2,._3,._4,._5{
+  transition-duration: .2s;
+  transition-property:background;
 }
-._1:before{content:"1"}
+/*._1:before{content:"1"}*/
 ._1{
   background:hsl(240, 100%, 70%);
 }
-._2:before{content:"2"}
+/*._2:before{content:"2"}*/
 ._2{
     background:hsl(240, 100%, 60%);
 }
-._3:before{content:"3"}
+/*._3:before{content:"3"}*/
 ._3{
     background:hsl(240, 100%, 50%);
 }
-._4:before{content:"4"}
+/*._4:before{content:"4"}*/
 ._4{
     background:hsl(240, 100%, 40%);
 }
-._5:before{content:"5"}
+/*._5:before{content:"5"}*/
 ._5{
   background:hsl(240, 100%, 30%);
 }
